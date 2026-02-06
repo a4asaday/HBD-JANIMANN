@@ -172,8 +172,8 @@ class RomanticEffects {
 
     /* 6. Surprise Love Notification */
     initSurpriseNotification() {
-        // Random time between 20-40 seconds
-        const delay = Math.random() * (40000 - 20000) + 20000;
+        // Random time between 60-90 seconds
+        const delay = Math.random() * (90000 - 60000) + 60000;
 
         setTimeout(() => {
             const notif = document.createElement('div');
