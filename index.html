@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Surprise for Janimann ♥️</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600&family=Tangerine:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-body">
+
+    <!-- Floating Hearts (Same logic as main site) -->
+    <div class="floating-container"></div>
+
+    <div class="login-card fade-in visible">
+        <h1 class="playfair">Hello, Janimann ♥️</h1>
+        <p>Before we begin, a small question...</p>
+
+        <form id="login-form">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Who owns my heart? (Your Name)" autocomplete="off">
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" placeholder="What do I call you?" autocomplete="off">
+            </div>
+
+            <button type="submit" class="login-btn">Unlock Surprise ✨</button>
+            <div class="error-msg" id="error-msg"></div>
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+    <script src="interactive-effects.js"></script>
+</body>
+
+</html>
