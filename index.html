@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Surprise for Janimann ♥️</title>
+    <title>Happy Birthday Janimann ♥️</title>
 
     <!-- Fonts -->
     <link
@@ -15,31 +15,345 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="login-body">
+<body>
+    <canvas id="confetti-canvas"></canvas>
 
-    <!-- Floating Hearts (Same logic as main site) -->
-    <div class="floating-container"></div>
+    <!-- WRAPPER FOR CONTENT (To separate from fixed controls when animating) -->
+    <div id="main-wrapper">
 
-    <div class="login-card fade-in visible">
-        <h1 class="playfair">Hello, Janimann ♥️</h1>
-        <p>Before we begin, a small question...</p>
-
-        <form id="login-form">
-            <div class="input-group">
-                <input type="text" id="username" placeholder="Who owns my heart? (Your Name)" autocomplete="off">
+        <!-- HERO SECTION -->
+        <section class="hero" id="hero">
+            <div class="floating-container"></div>
+            <div class="hero-content">
+                <h1 class="playfair">Happy Birthday <br>Meri Janimann ♥️</h1>
+                <h2>To Aleza — the love of my life for 7 beautiful years</h2>
+                <div class="date-badge">8th February • A Beautiful Soul</div>
             </div>
+        </section>
 
-            <div class="input-group">
-                <input type="password" id="password" placeholder="What do I call you?" autocomplete="off">
+        <!-- INTERACTIVE CAKE SECTION -->
+        <section class="cake-section fade-in">
+            <h2 class="playfair" style="color: var(--primary-brown); margin-bottom: 2rem;">Make a Wish, My Love</h2>
+            <div class="cake-container">
+                <div class="cake-base"></div>
+                <div class="cake-middle"></div>
+                <div class="cake-top"></div>
+
+                <div class="candle candle-1">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle candle-2">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle candle-3">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle candle-4">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle candle-5">
+                    <div class="flame"></div>
+                </div>
             </div>
+            <p style="color: var(--text-light); margin-top: 2rem; font-style: italic;">Tap the candles to light them
+                up...
+            </p>
+            <button class="blow-btn">Blow Out Candles 🎂</button>
+        </section>
 
-            <button type="submit" class="login-btn">Unlock Surprise ✨</button>
-            <div class="error-msg" id="error-msg"></div>
-        </form>
+        <!-- LOVE MESSAGE SECTION -->
+        <section class="message-section fade-in" style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <h2 class="playfair" style="color: var(--primary-brown); font-size: 2.5rem; margin-bottom: 2rem;">From My
+                Heart
+                to Yours</h2>
+            <div class="message-content" style="font-size: 1.1rem; line-height: 1.9;">
+                <p>
+                    My dearest Janimann,<br><br>
+                    Seven years ago, my life changed forever the moment I met you. You walked into my world and painted
+                    it
+                    with colors I never knew existed. Every laughter we share, every silence we hold, and every memory
+                    we
+                    create is a testament to how beautiful life can be with you.
+                    <br><br>
+                    Your kindness inspires me, your strength amazes me, and your love makes me the luckiest person
+                    alive.
+                    Through every season, you have been my constant, my anchor, and my greatest blessing.
+                    <br><br>
+                    Today isn't just about growing older; it's about celebrating the incredible woman you are. May your
+                    day
+                    be as radiant as your smile and as beautiful as your heart.
+                    <br><br>
+                    I love you, endlessly.
+                </p>
+            </div>
+        </section>
+
+        <!-- VIDEO MEMORIES -->
+        <section class="video-section fade-in">
+            <h2 class="playfair" style="text-align: center; color: var(--primary-brown); margin-bottom: 3rem;">Moments
+                in
+                Motion</h2>
+            <div class="video-container">
+                <video id="memory-video" controls playsinline>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-controls">
+                <div class="now-playing">Now Playing: <span>Loading...</span></div>
+            </div>
+        </section>
+
+        <!-- WISHES SECTION -->
+        <section class="wishes-section fade-in">
+            <h2 class="playfair" style="text-align: center; color: var(--primary-brown); margin-bottom: 4rem;">Languages
+                of
+                Love</h2>
+            <div class="wishes-grid">
+                <div class="card">
+                    <p>Happy Birthday, Janimann 🎂♥️<br>May your day be filled with the same warmth and love you
+                        bring into
+                        every corner of my life. Here's to celebrating you, our journey, and all the beautiful moments
+                        yet
+                        to come.</p>
+                </div>
+                <!-- <div class="card">
+                    <h3 class="playfair" style="text-align: right;">اردو</h3>
+                    <p dir="rtl" style="font-family: 'Noto Nastaliq Urdu', serif; font-size: 1.2rem; line-height: 2;">
+                        سالگرہ مبارک ہو میری جانِ من♥️<br>
+                        اللہ تمہیں ہمیشہ خوش رکھے، صحت و سلامتی سے رکھے اور تمہارا مسکراتا چہرہ ہمیشہ یونہی چمکتا رہے۔
+                        تم
+                        میری زندگی کا سب سے قیمتی اثاثہ ہو۔
+                    </p>
+                </div> -->
+                <div class="card">
+                    <p>Janamdin Mubarak meri Janimann 🎂 ♥️<br>Rabb tenu hamesha khush rakhe, khushi te sukh nu dey. Tu
+                        meri
+                        jeewan da sab ton sundar hissa ae. Hamesha hasdi vasdi reh.</p>
+                </div>
+                <div class="card">
+                    <p>Zma Janimann, Salgirah Mubarak Sha. 🎂 ♥️<br>Za ta ** mina kum.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHOTO GALLERY -->
+        <section class="gallery-section fade-in">
+            <h2 class="playfair" style="text-align: center; color: var(--primary-brown); margin-bottom: 4rem;">A Glimpse
+                of
+                Us</h2>
+            <div class="masonry-grid">
+                <!-- Row 1 -->
+                <div class="gallery-item">
+                    <img src="images/c.jpg" alt="Memory">
+                    <div class="gallery-caption">Our Beginning</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/1.JPG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/2.JPG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/3.JPG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/4.JPG" alt="Memory">
+                </div>
+
+                <!-- Row 2 -->
+                <div class="gallery-item">
+                    <img src="images/ll.jpg" alt="Memory" onerror="this.src='images/13.JPEG'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/17.jpeg" alt="Memory">
+                    <div class="gallery-caption">Special Moments</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/5.JPG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/6.JPG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/7.JPG" alt="Memory">
+                </div>
+
+                <!-- Row 3 -->
+                <div class="gallery-item">
+                    <img src="images/vv.jpg" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/we.png" alt="Card Art">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/8.JPG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/9.JPG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/10.JPG" alt="Memory">
+                </div>
+
+                <!-- Row 4 -->
+                <div class="gallery-item">
+                    <img src="images/25.JPG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/a.jpg" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/11.JPEG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/12.JPEG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/14.JPEG" alt="Memory">
+                </div>
+
+                <!-- Row 5 -->
+                <div class="gallery-item">
+                    <img src="images/15.JPEG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/16.JPG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/18.JPG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/19.JPG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/20.jpg" alt="Memory">
+                </div>
+
+                <!-- Row 6 -->
+                <div class="gallery-item">
+                    <img src="images/21.JPEG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/22.JPEG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/23.JPG" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/bdaydress1.jpeg" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/bdaydress2.jpeg" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/bdaydress3.jpeg" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/bdaydress4.jpeg" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/bdaydress5.jpeg" alt="Memory">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/bdaydress6.jpeg" alt="Memory">
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE -->
+        <section class="fade-in" style="background-color: var(--soft-white); padding: 5rem 2rem; text-align: center;">
+            <h2 class="playfair" style="color: var(--primary-brown);">Our Journey</h2>
+            <p style="font-size: 1.5rem; margin-top: 1rem; color: var(--text-light);">2018 — ♾️</p>
+            <div style="margin-top: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <p>From the first day to 7 beautiful years later, "Forever" still doesn't feel long enough.</p>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>Happy Birthday, Meri Janimann ♥️</p>
+            <div class="signature-large tangerine">Forever Asad</div>
+        </footer>
+
+    </div> <!-- END WRAPPER -->
+
+    <!-- CONTROLS BAR -->
+    <div class="controls-bar">
+        <button class="control-btn" id="aleza-mode-btn">Aleza Mode 🤎</button>
+        <button class="control-btn" id="heartbeat-btn">Feel My Heartbeat ♥️</button>
+        <button class="control-btn" id="countdown-btn">One Last Surprise ⏳</button>
+        <button class="control-btn" id="ai-mode-btn">Train Love Model 🧠</button>
     </div>
 
-    <script src="login.js"></script>
+    <!-- OVERLAYS -->
+    <div class="fullscreen-overlay" id="magical-overlay">
+        <div class="overlay-content">
+            <h2 class="playfair" id="overlay-title"></h2>
+            <p id="overlay-desc"></p>
+        </div>
+    </div>
+
+    <!-- AI OVERLAY -->
+    <div class="ai-overlay" id="ai-overlay">
+        <div class="ai-panel">
+            <div class="ai-header">
+                <span>> HEART_AI_V1.0</span>
+                <button class="ai-close-btn">&times;</button>
+            </div>
+
+            <!-- VIEW 1: CHAT -->
+            <div class="ai-view" id="ai-chat-view">
+                <div class="chat-output" id="chat-output">
+                    <span class="typing-cursor">_</span>
+                </div>
+                <div class="chat-controls">
+                    <button class="chat-btn" data-q="who">Who do you love?</button>
+                    <button class="chat-btn" data-q="output">What is your final output?</button>
+                    <button class="chat-btn" data-q="trained">What happens when trained with love?</button>
+                </div>
+                <button class="action-btn" id="start-training-btn">Run Training Sequence >></button>
+            </div>
+
+            <!-- VIEW 2: TRAINING -->
+            <div class="ai-view hidden" id="ai-training-view">
+                <div class="training-container">
+                    <div class="step-display" id="ai-step-display">Initializing...</div>
+
+                    <div class="progress-area">
+                        <div class="progress-label"><span>Feeding Memories...</span><span id="prog-1-val">0%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" id="prog-1"></div>
+                        </div>
+
+                        <div class="progress-label"><span>Optimizing Trust...</span><span id="prog-2-val">0%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" id="prog-2"></div>
+                        </div>
+                    </div>
+
+                    <div class="final-output" id="ai-final-output"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-msg" id="toast-msg"></div>
+    <div class="ai-error-toast" id="ai-error-toast">
+        <span class="error-icon">❌</span>
+        <div>
+            <strong>Error 404: Logic Not Found</strong><br>
+            Reason: Love overloaded the system 🤎
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
     <script src="interactive-effects.js"></script>
+    <script src="night-sky.js"></script>
+    <script src="puzzles.js"></script>
 </body>
 
 </html>
