@@ -83,7 +83,8 @@ function initVideoPlayer() {
 
     // List of videos found in the directory
     const playlist = [
-        { src: 'fav.mp4', title: 'Our Favorite Moment' },
+        { src: 'fav.mp4', title: 'Favorite Video' },
+        { src: 'bdaydressvideo.MP4', title: 'Birthday girl' },
         { src: 'concert.MP4', title: 'Musical Memories' },
         { src: 'henna.MP4', title: 'Beautiful Henna' },
         { src: 'meetup1.MP4', title: 'First Meetup' },
